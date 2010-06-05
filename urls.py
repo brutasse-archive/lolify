@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
+from django.http import HttpResponse
 
 from django.contrib import admin
 admin.autodiscover()

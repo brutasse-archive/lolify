@@ -5,11 +5,13 @@ from lol.models import Faq, Lol
 
 
 class FaqAdmin(admin.ModelAdmin):
+
     class Meta:
         model = Faq
 
 
 class LolAdmin(admin.ModelAdmin):
+
     class Meta:
         model = Lol
 

@@ -11,6 +11,7 @@ register = template.Library()
 
 
 class RandomQuoteNode(template.Node):
+
     def __init__(self, var_name):
         self.var_name = var_name
 

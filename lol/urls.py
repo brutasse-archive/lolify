@@ -1,14 +1,12 @@
 from django.conf.urls.defaults import *
-from django.http import HttpResponse
 
-from lol.views import home, lolify, question, share
 from lol.models import Faq, Lol
 from lol.forms import FaqForm
 
 info_dict = {
         'queryset': Faq.objects.all(),
         'template_name': 'faq.html',
-        'extra_context': {'form': FaqForm(),},
+        'extra_context': {'form': FaqForm()},
 }
 
 lol_dict = {

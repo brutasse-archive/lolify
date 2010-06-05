@@ -5,8 +5,6 @@ from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.views.generic.simple import direct_to_template
 
-import random
-
 from lol.forms import LolForm
 from lol.models import Lol
 
