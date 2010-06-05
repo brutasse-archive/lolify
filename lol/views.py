@@ -54,10 +54,11 @@ def question(request):
 
 def share(request):
     if request.method == 'POST' and request.POST['action'] == 'share':
-            text = request.POST['text']
-            loltext = request.POST['loltext']
-            lol = Lol(text=text, loltext=loltext)
-            lol.save()
-            return render_to_response('share.html', locals())
+        text = request.POST['text']
+        loltext = request.POST['loltext']
+        lol = Lol(text=text, loltext=loltext)
+        lol.save()
+        return render_to_response('share.html', locals(),
+                                  context_instance=RequestContext(request))
     else:
         return redirect(reverse('home'))
