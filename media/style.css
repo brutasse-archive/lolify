@@ -118,7 +118,7 @@ blockquote a:hover {
 
 #quote .quote {
 	color: #777;
-	background: url('/static/quote.png') no-repeat bottom;
+	background: url('quote.png') no-repeat bottom;
 	padding-bottom: 20px;
 }
 
