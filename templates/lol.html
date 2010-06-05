@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Lol #{{ object.id }}</h2>
+<blockquote>{{ object.text }}</blockquote>
+<blockquote class="translated">{{ object.loltext }}</blockquote>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Foire <span class="logo">o</span> kestions</h2>
+{% for q in object_list %}
+<div class="question">
+	<p class="q">Q : {{ q.question }}</p>
+	<p class="a">A : {{ q.answer }}</p>
+</div>
+{% endfor %}
+
+<h2>Poz<span class="logo">é</span> votr kesstion</h2>
+<form method="post" action="{% url question %}">
+	{{ form.as_p }}
+	<input type="submit" value="Ok lol"/>
+</form>
+{% endblock %}

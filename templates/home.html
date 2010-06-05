@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load lol_tags %}
+
+{% block content %}
+{% if lol %}
+<p>Vou voulé la tradukssion du texte
+	<blockquote>{{ lol }}</blockquote>
+</p>
+<p>Voilà la version traduite XD
+	<blockquote class="translated">{{ lol|lol }}</blockquote>
+</p>
+	</form>
+<p class="center">
+	<form method="post" action="{% url share %}">
+		{% csrf_token %}
+		<input type="hidden" name="text" value="{{ lol|truncatewords:15 }}"/>
+		<input type="hidden" name="loltext" value="{{ lol|lol|truncatewords:15 }}"/>
+		<input type="hidden" name="action" value="share"/>
+		<input type="submit" value="Partagé"/>
+		<a href="{% url home %}">Fère une otre traduksion</a>
+	</form>
+</p>
+{% else %}
+<div id="bob">
+	<h2>Tapé le texte à <span class="logo">lol</span>ifié</h2>
+	<form method="post" action="{% url lol %}">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="\o/"/>
+	</form>
+</div>
+<div id="help">
+	<h2>Sai koi sa ?</h2>
+	<p><span class="logo">Lol</span>ify est un service facilitant la communication inter-générationnelle et l'apprentissage des dernières tendances en matière de langage.</p>
+	<p><span class="logo">Lol</span>ify vous permet de convertir vos textes en langage kikoo-skybloggable et de vous perfectionner dans cette technique. Vous pouvez aussi partager vos traductions avec vos amis, et rejoindre tous les kikoo-lols du groupe facebook <span class="logo">lol</span>ify !</p>
+</div>
+{% endif %}
+{% endblock %}

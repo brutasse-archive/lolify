@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load lol_tags %}
+
+{% block content %}
+<h2>Partagé un lol</h2>
+{% if lol %}
+<p>Votr lol é aksésible à ladresse ki é là :</p>
+<blockquote>
+	<a href="{{ lol.get_absolute_url }}">http://{{ request.get_host }}{{ lol.get_absolute_url }}</a>
+</blockquote>
+
+{% endif %}
+{% endblock %}

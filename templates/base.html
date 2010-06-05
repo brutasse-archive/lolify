@@ -1,0 +1,37 @@
+{% load lol_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<title>• Lolify • {% block pagetitle %}{% endblock %} Lol!</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="/static/style.css" media="screen"/>
+	</head>
+	<body>
+		<div id="header">
+			<div id="title">
+					<h1><span class="logo">•</span>Lolify<span class="beta">Beta</span></h1>
+					<p class="sub">Wanna be a kikoolol?</p>
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="{% url home %}" title="Akeuil lol">Akeuil</a></li>
+					<li><a href="{% url fok %}" title="Foire o kestions">Fok</a></li>
+				</ul>
+			</div>
+			<div id="quote">
+				{% block quote %}
+					{% get_random_quote as quote %}
+					<p class="quote">{{ quote.0 }}</p>
+					<p class="author">{{ quote.1 }}</p>
+				{% endblock %}
+			</div>
+		</div>
+		<div id="content">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<div id="footer">
+			<p><span class="logo">Lol</span>ify - <a href="http://www.facebook.com/pages/Lolify/48251899937" title="Viendez au Lolify Facebook Group!">Lolify sur Facebook</a></p>
+		</div>
+	</body>
+</html>

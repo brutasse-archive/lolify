@@ -1,0 +1,4 @@
+fabfile.py
+requirements.txt
+local_settings.py
+*.db

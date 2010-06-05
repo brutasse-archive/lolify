@@ -1,0 +1,163 @@
+html {
+	margin: 0;
+	padding: 0;
+	background-color: #efeeee;
+}
+
+body {
+	padding: 1em;
+	width: 70%;
+	margin: 1em auto;
+	background-color: #fff;
+	border: 1px solid #22c;
+	font-family: Tahoma, arial;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+label {
+	display: none;
+}
+
+input {
+	font-size: 1.3em;
+	margin: 0.3em 0;
+}
+
+h1 {
+	font: Bold 45px 'Trebuchet MS', Helvetica, sans-serif;
+	letter-spacing: -2px;
+	margin: 0;
+	padding-bottom: 0;
+}
+
+h2 {
+	margin: 0.3em 0;
+	padding-top: 0.5em;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #2361ba;
+	padding: 0.1em 0.3em;
+	margin: 0.1em 0;
+}
+
+p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+a:hover {
+	background-color: #2361ba;
+	color: #fff;
+}
+
+.logo {
+	color: #66f;
+}
+
+.beta { color: #f22; font-size: 0.3em; margin-left: 0.5em; font-weight: normal;  letter-spacing: -1px; }
+
+.center {
+	text-align: center;
+}
+
+.sub {
+	color: #888;
+	margin: 0 4em;
+	padding: 0;
+	font-size: 0.8em;
+}
+
+blockquote {
+	margin: 10px 15px;
+	padding: 0 0 0 25px;
+	font: bold 1.3em/1.5em "Trebuchet MS", Tahoma, arial, Sans-serif;
+	color: #2361ba;
+	border: 1px solid #E5F0FB;
+	background-color: #F4F8FD;
+}
+
+blockquote.translated {
+	color: #ba6123;
+}
+
+blockquote a:hover {
+	background: inherit;
+	text-decoration: underline;
+	color: #ba6123;
+}
+
+#header #title {
+	float: left;
+}
+
+#header #nav {
+	float:left;
+	padding: 0.5em;
+	background-color: #2361ba;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#header #nav ul { list-style-type: none; }
+#header #nav ul li { float: left; }
+#header #nav ul li a { color: #fff; padding: 0.5em; }
+#header #nav ul li a:hover { background-color: #4381da; }
+
+#header #quote {
+	float: right;
+	margin-right: 3em;
+	width: 120px;
+}
+
+#quote .author {
+	color: #aaa;
+}
+
+#quote .quote {
+	color: #777;
+	background: url('/static/quote.png') no-repeat bottom;
+	padding-bottom: 20px;
+}
+
+#content {
+	clear: left;
+}
+
+#bob {
+	float: left;
+	margin-right: 3em;
+}
+
+#help {
+	clear: right;
+	font-family: Arial, Verdana, sans-serif;
+}
+#help p {
+	margin-bottom: 0.8em;
+}
+
+.question {
+	border-left: 3px solid #2361ba;
+	padding-left: 0.3em;
+	margin: 1em 0.5em;
+}
+.question .a {
+	margin-left: 0.3em;
+	font-size: 0.9em;
+}
+
+#footer {
+	clear: both;
+	margin-top: 0.5em;
+	padding-top: 1em;
+	text-align: center;
+	border-top: 1px solid #2361ba;
+}
+
+#footer a {
+	padding: 0 0.1em;
+	font-weight: normal;
+}
