@@ -11,6 +11,7 @@
 
 <h2>Poz<span class="logo">é</span> votr kesstion</h2>
 <form method="post" action="{% url question %}">
+	{% csrf_token %}
 	{{ form.as_p }}
 	<input type="submit" value="Ok lol"/>
 </form>
